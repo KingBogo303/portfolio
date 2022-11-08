@@ -22,14 +22,11 @@
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  /* background: #00cc99; */
   background: var(--gray);
-  /* background: var(--main-color); */
 
   border-radius: 50px;
 }
 ::-webkit-scrollbar-thumb {
-  /* background: #6600ff; */
   background: var(--main-color);
   border-radius: 50px;
 }
@@ -397,6 +394,11 @@ form .send-btn:hover {
     border-left: 2px solid var(--main-color);
     margin: 1rem;
   }
+  .cta {
+    transition: 0.3s;
+    padding: 70px 0;
+    margin: 50px auto;
+  }
   .navbar.active {
     top: 100%;
   }
@@ -432,5 +434,23 @@ form .send-btn:hover {
   }
   .sec-btn {
     justify-content: center;
+  }
+  .resume-content {
+    grid-template-columns: repeat(auto-fit, minmax(270px, auto));
+    grid-gap: 3rem;
+  }
+  .cta h2 {
+    font-size: 2.3rem;
+  }
+  .service-content {
+    grid-template-columns: repeat(auto-fit, minmax(270px, auto));
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 560px) {
+  .sec-btn {
+    flex-direction: column;
   }
 }
