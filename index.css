@@ -253,18 +253,81 @@ section {
 }
 .resume-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 300px));
   grid-gap: 3rem;
   align-items: center;
   margin-top: 4.4rem;
+  justify-content: center;
 }
-.box {
+.the-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.box-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), #edabab);
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.4s;
+}
+.box-text h5 {
+  font-size: 20px;
+  font-weight: 600;
+  text-shadow: 0 0 5px rgb(0 0 0/50%);
+}
+.box-text i {
+  position: relative;
+  color: var(--main-color);
+  margin-top: 20px;
+  font-size: 20px;
+  background: var(--white);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.box-text i span {
+  position: absolute;
+  top: 50%;
+  font-size: 14px;
+  font-family: sans-serif;
+  color: var(--white);
+  transform: translateY(-50%);
+  left: 110%;
+  display: none;
+  text-align: left;
+  text-shadow: 0 0 5px rgb(0 0 0/50%);
+  transition: 0.4s;
+}
+.box-text i:hover span {
+  display: block;
+}
+.the-box:hover img {
+  scale: 1.04;
+}
+
+.the-box img {
+  transition: 0.4s;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+/* .box {
   background: #0b0b13;
   padding: 40px 30px;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.4s;
-}
+} */
 .box h6 {
   color: #3e4455;
   font-size: 14px;
@@ -499,10 +562,6 @@ form .send-btn:hover {
   }
   .sec-btn {
     justify-content: center;
-  }
-  .resume-content {
-    grid-template-columns: repeat(auto-fit, minmax(270px, auto));
-    grid-gap: 3rem;
   }
   .cta h2 {
     font-size: 2.3rem;
