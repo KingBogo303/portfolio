@@ -20,6 +20,6 @@ const sr = ScrollReveal({
 sr.reveal(".home-text", { delay: 150, origin: "top" });
 sr.reveal(".home-img", { delay: 300, origin: "top" });
 sr.reveal(".about, .services, .cta, .resume, .contact, .copyright", {
-  delay: 100,
+  delay: 70,
   origin: "top",
 });
